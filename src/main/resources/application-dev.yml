@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    hikari:
+      connection-test-query: select 1
+    url: jdbc:mysql://127.0.0.1:3306/api?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=UTC
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
+    name: api-hikari
+  application:
+    name: api
+  session:
+    jdbc:
+      cleanup-cron: 0 * * * * *
+  security:
+    user:
+      name: root
+      password: root
+      roles: ADMIN
